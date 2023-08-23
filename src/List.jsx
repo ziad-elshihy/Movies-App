@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
-import { Card, CardHeader, Image, } from "@nextui-org/react";
+import { Card, CardFooter, Image } from "@nextui-org/react";
 import Prompt from './Prompt';
 
 const List = ({ movie }) => {
    return (
       <div className="relative max-w-[900px] grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-         <Card className="col-span-12 sm:col-span-4 h-[450px] md:h-[340px] lg:h-[340px]" >
-            <CardHeader className="absolute z-10 bottom-0 flex justify-between">
-               <Prompt movie={movie} />
-            </CardHeader>
+         <Card
+            isFooterBlurred
+            radius="lg"
+            className="border-none col-span-12 sm:col-span-4 h-[450px] md:h-[340px] lg:h-[340px]"
+         >
             <Image
                isZoomed
                removeWrapper
@@ -16,6 +17,9 @@ const List = ({ movie }) => {
                className="z-0 w-full h-full object-cover"
                src={movie.Poster}
             />
+            <CardFooter className="justify-center before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                  <Prompt  movie={movie} />
+            </CardFooter>
          </Card>
       </div>
    )

@@ -4,7 +4,7 @@ const Prompt = ({ movie }) => {
    const { isOpen, onOpen, onOpenChange } = useDisclosure();
    return (
       <>
-         <Button className="text-tiny text-white bg-black/40" variant="flat" color="default" radius="lg" onPress={onOpen}>Info</Button>
+         <Button className="text-tiny text-white bg-black/40" variant="flat" color="default" radius="lg" size="sm" onPress={onOpen}>Info</Button>
          <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
             <ModalContent>
                {(onClose) => (
