@@ -1,6 +1,6 @@
 import { CircularProgress, } from "@nextui-org/react";
 import { useEffect, useState } from "react";
-import Movies from "./movies";
+import Movies from "./Movies";
 import List from "./List";
 const Home = () => {
    // eslint-disable-next-line no-unused-vars
