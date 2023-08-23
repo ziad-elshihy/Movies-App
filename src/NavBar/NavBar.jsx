@@ -1,22 +1,16 @@
-import React from "react";
 import { Navbar, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, NavbarBrand, NavbarContent, NavbarItem, Button } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo.jsx";
 // eslint-disable-next-line no-unused-vars
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 const NavBar = () => {
-   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
    // eslint-disable-next-line no-unused-vars
-   const [isActive, setIsActive] = React.useState(true);
+   const [isActive, setIsActive] = useState(true);
    const menuItems = [
-      "Profile",
-      "Dashboard",
-      "Activity",
-      "Analytics",
-      "System",
-      "Deployments",
-      "My Settings",
-      "Team Settings",
-      "Help & Feedback",
+      "Home",
+      "Watch list",
+      "Watched"
    ];
    return (
       <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -38,12 +32,12 @@ const NavBar = () => {
                </Link>
             </NavbarItem>
             <NavbarItem >
-               <Link color="foreground" to="/watchlist" >
+               <Link to="/watchlist" >
                   Watch list
                </Link>
             </NavbarItem>
             <NavbarItem>
-               <Link color="foreground" to="/watched">
+               <Link  to="/watched">
                   Watched
                </Link>
             </NavbarItem>
