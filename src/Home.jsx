@@ -9,7 +9,7 @@ const Home = () => {
    useEffect(() => {
       setTimeout(() => {
          setLoading(false)
-      }, 1700)
+      }, 2000)
    }, [])
    return (
       <main className="py-[50px]">
